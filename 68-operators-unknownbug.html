@@ -11,6 +11,7 @@
   
   <p id="buttons"></p>
   <p id="result"></p>
+  <p id="log"></p>
   
   <script>
     var a, b;
@@ -20,18 +21,20 @@
     
     var buttons = document.getElementById('buttons');
     for (var ix in ops) {
-      var _op = ops[ix];
-      var _str = "a " + _op + " b";
-      fs[_op] = function(a, b) {return eval(_str)}, 
+      var op = ops[ix];
+      fs[op] = function(a, b, o) {return eval("a " + o + " b")}, 
       buttons.innerHTML += 
-        '<button onclick="f(this)">' + _op + '</button>';
+        '<button onclick="f(this)">' + op + '</button>';
     }
     
+    for (var o in fs) {
+      document.getElementById('log').innerHTML += fs[o] + '<br>';
+    }
     function f(button) {
       read_data();      
 
       var op = button.innerHTML;
-      print_result(fs[op](a, b), op);
+      print_result(fs[op](a, b, op), op);
     }
     
     function read_data() {
