@@ -14,6 +14,29 @@ for (var short in months) { // for-in
 }
 
 var colours = ['red', 'green', 'blue', 'yellow', 'orange'];
-for (var c in colours) {
-  document.write(c + '<sup>th</sup> elem is ' + colours[c] + '<br>');
+for (var c in colours) {  
+
+  var ending;
+
+  if (c == 1) ending = 'st';
+  else if (c == 2) ending = 'nd';
+  else if (c == 3) ending = 'rd';
+  else ending = 'th';
+   
+  // document.write(typeof c); // string
+//   switch(c) {
+//     case "1": // if (c === "1")
+//       ending = 'st';
+//       break;
+//     case "2":
+//       ending = 'nd';
+//       break;
+//     case "3":
+//       ending = 'rd';
+//       break;
+//     default:
+//       ending = 'th';
+//   }
+  
+  document.write(c + '<sup>' + ending + '</sup> elem is ' + colours[c] + '<br>');
 }
