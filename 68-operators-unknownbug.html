@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <input id="a" />
+  <input id="b" />
+  
+  <p id="buttons"></p>
+  <p id="result"></p>
+  
+  <script>
+    var a, b;
+    
+    var ops = ['+', '-', '*', '/'];
+    var fs = {};
+    
+    var buttons = document.getElementById('buttons');
+    for (var ix in ops) {
+      var _op = ops[ix];
+      var _str = "a " + _op + " b";
+      fs[_op] = function(a, b) {return eval(_str)}, 
+      buttons.innerHTML += 
+        '<button onclick="f(this)">' + _op + '</button>';
+    }
+    
+    function f(button) {
+      read_data();      
+
+      var op = button.innerHTML;
+      print_result(fs[op](a, b), op);
+    }
+    
+    function read_data() {
+      a = parseFloat(document.getElementById('a').value);
+      b = parseFloat(document.getElementById('b').value);
+    }
+    
+    function print_result(result, operator) {
+      result = result.toString().replace('-', '&minus;');
+      document.getElementById('result').innerHTML = 
+        a + '&thinsp;' + operator + '&thinsp;' +
+        b + '&thinsp;=&thinsp;' + result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <p id="text-holder">Default text</p>
+  <button onclick="update(1)">Plus</button>
+  <button onclick="update(-1)">Minus</button>
+
+  <script>
+    var c = 0;
+    function update(delta) {
+      c += delta;
+      document.getElementById('text-holder').innerHTML = c;
+    }
+  </script>
+</body>
+</html>

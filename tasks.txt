@@ -1,0 +1,64 @@
+== Variables ==
+1. Create a variable called carName, assign the value "Volvo" to it, and display it.
+2. Create a variable called number, assign the value 50 to it, and display it.
+3. The code below should display "Volvo" - Fix it.
+    var carName = "Volvo";
+    document.getElementById("demo").innerHTML = carname;
+4. Display the sum of 5 + 10, using two variables x and y.
+5. Create a third variable called z, assign x + y to it, and display it.
+    var x = 5;
+    var y = 10;
+6. Use a single var keyword to create three variables with the following values: 
+    firstName = "John" 
+    lastName = "Doe" 
+    age = 35
+
+    document.getElementById("demo").innerHTML = 
+    firstName + " " + lastName + " is " + age;
+
+== Arithmetics ==
+1. Display the product of 10 * 5, using two variables x and y.
+2. Find the remainder when 15 is divided by 9, using two variables x and y.
+3. Use the += operator to add a value of 5 to the variable x.
+4. Use the %= operator to assign a remainder of 10 / 3 to the variable x.
+
+== Functions ==
+1. Create and call a function.
+2. Use the function to display the product of 5 * 5.
+3. Use the function to display "Hello John".
+4. Define a function named "myFunction", and make it display "Hello World!" in the <p> element.
+
+== Objects ==
+1. Display "John" by extracting information from the person object.
+    var person = {firstName:"John", lastName:"Doe"};
+2. Create an object called person with name = John, age = 50. Then, access the object to display "John is 50 years old".
+
+=== Events ==
+1. The <p> element should do something when someone clicks on it.
+2. When the button is clicked, trigger myFunction() with an event.
+3. The <span> element should do something when someone moves the mouse over it.
+
+== Strings ==
+1. Assign the string "Hello World!" to the variable txt.
+2. Use the length property to display the length of the txt variable's value.
+3. Use escape characters to display the text correctly.
+    document.getElementById("demo").innerHTML = "We are "Vikings".";
+4. Concatenate the two strings to display "Hello World!".
+5. Display the position of the first occurrence of "World" in the variable txt.
+6. Use the slice() method to display only "Banana,Kiwi".
+    var str = "Apple,Banana,Kiwi";
+7. Use the replace() method to replace "World" with "Universe".
+    var txt = "Hello World";
+8. Convert the value of txt to upper case.
+9. Convert the value of txt to lower case.
+10. Use the concat() method to join the two strings: str1 and str2.
+
+== Random ==
+1. Create a function that always returns a random integer number between min (included) and max (excluded).
+
+
+Calculator
+
+functions as constructors
+self-invoking functions
+
