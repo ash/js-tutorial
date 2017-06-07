@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <form>
+    <input type="text" name="first_name" placeholder="First name" onkeyup="check_fields()" /><br />
+    <input type="text" name="last_name" placeholder="Last name" onkeyup="check_fields()" /><br />
+    <input type="submit" name="submit_button" value="Submit" disabled="true" />
+  </form>
+  
+  <script>
+    var f = document.forms[0];
+    function check_fields() {
+      console.log('[' + f.first_name.value.trim() + ',' + f.last_name.value.trim() + ']');
+      
+      
+      f.submit_button.disabled = 
+        !(f.first_name.value.trim() && f.last_name.value.trim());
+    }
+    
+  </script>
+</body>
+</html>
+

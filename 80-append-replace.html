@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div id="place"></div>
+  
+  <div id="parent">
+    <p id="ch1">ch1</p>
+    <p id="ch2">ch2</p>
+    <p id="ch3">ch3</p>
+  </div>
+  
+  <script>
+    // create
+    document.getElementById('place').innerHTML = 
+    '<p>Value is <b>5</b></p>' + 
+    '<p>Another value is <b>6</b></p>';
+
+
+    var p = document.createElement('p');
+    p.innerHTML = 'text';
+    document.getElementById('place').appendChild(p);
+
+
+    // replace
+    var p2 = document.createElement('p');
+    p2.innerHTML = 'new para';
+
+    var parent = document.getElementById('parent');
+    var ch2 = document.getElementById('ch2');
+    parent.replaceChild(p2, ch2);
+    
+  </script>
+</body>
+</html>
+

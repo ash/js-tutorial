@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <p id="myP">1</p>
+  <div id="mydiv">
+    <p id="myp2">2</p>
+    <p id="myp">3</p>
+  </div>
+  
+  <script>
+    document.getElementById('myP').innerHTML = 'my value';
+ 
+    var ps = document.getElementsByTagName('P');
+    ps[1].innerHTML = 'new value';
+    document.write('in document: ' + ps.length)
+
+    
+    var myowndiv = document.getElementById('mydiv');
+    var ps_in_div = myowndiv.getElementsByTagName('p');
+    document.write('in div: ' + ps_in_div.length);
+    
+
+    var divs = document.getElementsByTagName('div');
+    document.write(divs[0].getElementsByTagName('p').length);
+    
+    
+  </script>
+ 
+</body>
+</html>
